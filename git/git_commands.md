@@ -6,7 +6,11 @@ Use this table for **quick revision**. Simple commands, clean explanations.
 | ----------------------------- | ----------------------------------------------------- |
 | `git init`                    | Initialize a new Git repository in the current folder |
 | `git status`                  | Check file status (modified, staged, untracked)       |
-| `git add .`                   | Add all changed files to staging area                 |
+| `git add .` or `git add --all`| Add all changed files to staging area                 |
+| `git add *.txt`               | Add all files with extension .txt of the current directory to a staging area                        |
+| `git add docs/*.txt`          | Add all text files with .txt extension of the docs directory to staging area                        |
+| `git add docs/`               | Add all text files of a particular directory(docs) to staging area                        |
+| `git add “*.txt”`             | Add all files in a particular directory(docs) to staging area                        |
 | `git add <file>`              | Add a specific file to staging                        |
 | `git commit -m "message"`     | Save staged changes with a commit message             |
 | `git log`                     | View full commit history                              |
@@ -31,6 +35,8 @@ Use this table for **quick revision**. Simple commands, clean explanations.
 | `git stash pop`               | Restore last stashed changes                          |
 | `git rm <file>`               | Delete file and stage the deletion                    |
 | `git mv <old> <new>`          | Rename or move a file                                 |
+| `ls`                          | View the folder structure                             |
+| `ls -a`                       | View the folder structure include hidden files        |
 
 ---
 
