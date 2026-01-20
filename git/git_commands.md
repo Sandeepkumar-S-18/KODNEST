@@ -1,146 +1,41 @@
-# Git Basic Commands – Simple & Clear Guide
+# Basic Git Commands
 
-This file explains **two common Git workflows** in a clean, step‑by‑step way.
-Use this as a quick reference while practicing Git.
+Use this table for **quick revision**. Simple commands, clean explanations.
 
----
-
-## CASE 1: Project Created Locally → Push to GitHub
-
-### Step 1: Initialize Git in Local Project
-```bash
-git init
-```
-Initializes a Git repository in the current folder.
-
----
-
-### Step 2: Set Branch Name (Recommended)
-```bash
-git branch -M main
-```
-Renames the current branch to `main`.
-
----
-
-### Step 3: Connect Local Repo to GitHub
-```bash
-git remote add origin <github-repo-url>
-```
-Links local repository with GitHub repository.
-
-```bash
-git remote -v
-```
-Verifies the remote connection.
+| Command                       | Explanation                                           |
+| ----------------------------- | ----------------------------------------------------- |
+| `git init`                    | Initialize a new Git repository in the current folder |
+| `git status`                  | Check file status (modified, staged, untracked)       |
+| `git add .`                   | Add all changed files to staging area                 |
+| `git add <file>`              | Add a specific file to staging                        |
+| `git commit -m "message"`     | Save staged changes with a commit message             |
+| `git log`                     | View full commit history                              |
+| `git log --oneline`           | View commit history in one line per commit            |
+| `git diff`                    | Show changes between working directory and staging    |
+| `git branch`                  | List all local branches                               |
+| `git branch <name>`           | Create a new branch                                   |
+| `git branch -M main`          | Rename current branch to `main`                       |
+| `git checkout <branch>`       | Switch to another branch                              |
+| `git checkout -b <branch>`    | Create and switch to a new branch                     |
+| `git merge <branch>`          | Merge another branch into current branch              |
+| `git remote -v`               | Show connected remote repositories                    |
+| `git remote add origin <url>` | Connect local repo to remote (GitHub)                 |
+| `git clone <url>`             | Copy a remote repository to local system              |
+| `git pull`                    | Fetch and merge changes from remote to local          |
+| `git fetch`                   | Fetch changes from remote (no merge)                  |
+| `git push`                    | Push local commits to remote repository               |
+| `git push -u origin main`     | Push and set upstream branch                          |
+| `git reset <file>`            | Unstage a file                                        |
+| `git reset --hard`            | Reset all changes (⚠ dangerous)                       |
+| `git stash`                   | Temporarily save uncommitted changes                  |
+| `git stash pop`               | Restore last stashed changes                          |
+| `git rm <file>`               | Delete file and stage the deletion                    |
+| `git mv <old> <new>`          | Rename or move a file                                 |
 
 ---
 
-### Step 4: Check File Status
-```bash
-git status
-```
-Shows modified, staged, and untracked files.
+### Revision Tip
 
----
+Most-used daily flow:
 
-### Step 5: Add Files to Staging Area
-```bash
-git add .
-# or
-git add <file-name>
-```
-Moves changes to staging.
-
----
-
-### Step 6: Commit Changes
-```bash
-git commit -m "Initial commit"
-```
-Saves changes locally with a message.
-
----
-
-### Step 7: Push to GitHub (First Time)
-```bash
-git push -u origin main
-```
-Pushes code and sets upstream branch.
-
-After this, you can simply use:
-```bash
-git push
-```
-
----
----
-
-## CASE 2: Repository Created on GitHub → Clone to Local
-
-### Step 1: Clone Repository
-```bash
-git clone <github-repo-url>
-```
-Downloads the repository and sets remote automatically.
-
----
-
-### Step 2: Move Into Project Folder
-```bash
-cd <repo-folder-name>
-```
-
----
-
-### Step 3: Check Status
-```bash
-git status
-```
-
----
-
-### Step 4: Add Changes
-```bash
-git add .
-# or
-git add <file-name>
-```
-
----
-
-### Step 5: Commit Changes
-```bash
-git commit -m "Your commit message"
-```
-
----
-
-### Step 6: Push Changes
-```bash
-git push
-```
-No branch name needed because upstream already exists.
-
----
-
-## Quick Notes
-- Always **commit before push**
-- Use `git status` often
-- After first push, `git push` is enough
-- After `git clone`, **do NOT add remote again**
-
----
-
-## Easy Memory Trick
-
-**Local → GitHub**  
-`init → branch → remote → add → commit → push`
-
-**GitHub → Local**  
-`clone → add → commit → push`
-
----
-
-Keep this file in your project for quick revision 🚀
-
+`git status → git add → git commit → git push`
