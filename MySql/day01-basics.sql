@@ -128,6 +128,12 @@ CREATE TABLE IF NOT EXISTS students (
     age INT
 );
 
+CREATE TABLE IF NOT EXISTS students (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+    age INT
+) AUTO_INCREMENT = 1001;
+
 -- ==========================================================================
 -- 10. Inserting Data (Basic)
 INSERT INTO students (name, age) VALUES ("Sandeepkumar S", 23);

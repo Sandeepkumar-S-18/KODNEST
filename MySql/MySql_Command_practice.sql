@@ -1,12 +1,12 @@
 -- ======================================================================================================================
 -- CREATE THE DATABASE
-CREATE DATABASE kodnest_practice;
+CREATE DATABASE mysql_learnings;
 
 -- DELETE THE DATABASE
-DROP DATABASE kodnest_practice;
+DROP DATABASE mysql_learnings;
 
 -- OPEN THE DATABASE FO USE
-USE kodnest_practice;
+USE mysql_learnings;
 
 -- CREATE A TABLE
 CREATE TABLE student (
@@ -100,3 +100,53 @@ INSERT INTO student(id, name, age) VALUES
 (6, "CHETHAN S", 26);
 
 -- ======================================================================================================================
+-- KEYS
+	-- Primary Key
+	-- Unique Key
+	-- Foreign Key
+
+-- CONSTRAINTS
+	-- NOT NULL
+	-- UNIQUE
+		-- CREATE TABLE table_name (id INT UNIQUE);
+    -- PRIMARY KEY
+		/*
+			CREATE TABLE table_name (
+				id INT,
+				name VARCHAR(50),
+				PRIMARY KEY(id)
+			);
+		*/
+	-- FOREIGN KEY
+		/*
+			CREATE TABLE table_name (
+				cust_id INT,
+				FOREIGN KEY (cust_id) REFERENCES another_table(id)
+			);
+		*/
+	-- DEFAULT
+		-- salary INT DEFAULT 25000
+	-- CHECK 
+		/*
+			CREATE TABLE city (
+				id INT PRIMARY KEY,
+                city VARCHAR(50),
+                age INT,
+                CONSTRAINT age_check CHECK (age >= 18 AND city = "Karnataka")
+            );
+            CREATE TABLE newTab (
+				age INT CHECK (age >= 18)
+            );
+        */
+    
+
+
+
+
+
+
+
+
+
+
+
