@@ -138,12 +138,89 @@ INSERT INTO student(id, name, age) VALUES
 				age INT CHECK (age >= 18)
             );
         */
-    
 
+-- ======================================================================================================================
+CREATE TABLE student (
+	rollno INT PRIMARY KEY,
+    name VARCHAR(50),
+    marks INT NOT NULL,
+    grade VARCHAR(1),
+    city VARCHAR(20)
+);
 
+INSERT INTO student 
+(rollno, name, marks, grade, city)
+VALUES
+(101, "Anil", 78, "C", "Pune"),
+(102, "Santosh", 95, "A", "Karnataka"),
+(103, "Alva", 90, "A", "AP");
 
+-- READ ONLY NAME AND MARKS FROM TABLE
+SELECT name, marks FROM student;
 
+-- READ ALL DATA FROM TABLE
+SELECT * FROM student;
 
+-- READ ONLY CITY FROM TABLE
+SELECT city FROM student;
+
+-- READ THE DATA WITHOUT REPETATION FROM TABLE
+SELECT DISTINCT city FROM student;
+
+-- ======================================================================================================================
+/*
+	WHERE Clause
+		- Arithmetic Operators		: +, -, *, /, %
+        - Comparison Operators		: =, !=, >, >=, <, <=
+        - Logical Operators			: AND, OR, NOT, IN, BETWEEN, ALL, LIKE, ANY
+        - Bitwise Operators			: &, |
+*/
+SELECT * FROM student WHERE marks > 90;
+SELECT * FROM student WHERE city != "Karnataka";
+SELECT * FROM student WHERE marks > 90 AND city = "AP";
+SELECT * FROM student WHERE marks > 90 OR city = "AP";
+SELECT * FROM student WHERE marks BETWEEN 80 AND 90;
+SELECT * FROM student WHERE city IN ("Karnataka", "AP");
+SELECT * FROM student WHERE city NOT IN ("Karnataka");
+SELECT * FROM student WHERE marks+10 > 100;
+SELECT * FROM student WHERE marks = 90;
+SELECT * FROM student WHERE marks != 90;
+
+-- LIMIT Clause - Set an upper limit on number of rows to be returned.
+SELECT * FROM student LIMIT 2;
+SELECT * FROM student WHERE marks > 85 LIMIT 1;
+
+-- ORDER BY Clause - To sort in ascending or descending order.
+SELECT * FROM student ORDER BY city ASC;
+SELECT * FROM student ORDER BY marks ASC;
+SELECT * FROM student ORDER BY marks DESC;
+SELECT * FROM student ORDER BY marks DESC LIMIT 1;
+
+/*
+	GROUP BY Clause  
+		- Groups rows that have the same values into summary rows.
+        - It collects data from multiple records and groups the result by one or more column.
+        - *Generally we use group by with some aggregate functions.
+*/
+SELECT city, COUNT(name) FROM student GROUP BY city;
+SELECT city, AVG(marks) FROM student GROUP BY city;
+-- ======================================================================================================================
+-- FUNCTIONS
+/*
+	Aggregate functions
+		- Aggregate functions perform a calculation on a set of values, and return a single value.
+        * COUNT()
+        * MAX()
+        * MIN()
+        * SUM()
+        * AVG()
+*/
+SELECT MAX(marks) FROM student;
+SELECT AVG(marks) FROM student;
+SELECT MIN(marks) FROM student;
+SELECT COUNT(name) FROM student;
+
+-- ======================================================================================================================
 
 
 
