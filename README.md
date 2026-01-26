@@ -45,4 +45,23 @@ The goal is simple: **learn → build → break → fix → repeat**.
 
 ---
 
+### Day 4 – MySQL Data Types & Constraints (Basics)  *[25/01/2026]*
+- Learned commonly used **MySQL data types**:
+  - `INT`, `VARCHAR`, `DATE`, `DECIMAL`
+- Understood why data types matter (storage + validation)
+- Learned **basic constraints**:
+  - `PRIMARY KEY`
+  - `NOT NULL`
+  - `UNIQUE`
+- Created tables using proper data types and constraints
+- Practiced inserting valid and invalid data to see constraint behavior
+
+---
+
+### Day 5 – MySQL CRUD Operations  *[26/01/2026]*
+- Understood the concept of **CRUD operations**
+- Performed basic operations on a sample table
+
+---
+
 🚧 *This repo will keep evolving as I move deeper into full-stack development.*
