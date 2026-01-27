@@ -64,4 +64,13 @@ The goal is simple: **learn → build → break → fix → repeat**.
 
 ---
 
+### Day 6 – SQL Filtering & Sorting  *[27/01/2026]*
+- Used `WHERE` to filter records based on conditions
+- Applied `ORDER BY` to sort query results
+- Limited output using `LIMIT`
+- Performed pattern matching using `LIKE`
+- Practiced combining filters in `SELECT` queries
+
+---
+
 🚧 *This repo will keep evolving as I move deeper into full-stack development.*
