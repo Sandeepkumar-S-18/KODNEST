@@ -73,4 +73,13 @@ The goal is simple: **learn → build → break → fix → repeat**.
 
 ---
 
+### Day 7 – Aggregate Functions & GROUP BY  *[28/01/2026]*
+- Learned SQL aggregate functions:
+  - `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`
+- Used `GROUP BY` to group rows
+- Applied aggregate functions on grouped data
+- Practiced basic analytical queries
+
+---
+
 🚧 *This repo will keep evolving as I move deeper into full-stack development.*
