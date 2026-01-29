@@ -82,4 +82,13 @@ The goal is simple: **learn → build → break → fix → repeat**.
 
 ---
 
+### Day 8 – JOINS & Subqueries  *[29/01/2026]*
+- Learned different types of JOINS:
+  - `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`
+- Combined data from multiple tables
+- Understood the concept of subqueries
+- Practiced basic subqueries with `SELECT`
+
+---
+
 🚧 *This repo will keep evolving as I move deeper into full-stack development.*
