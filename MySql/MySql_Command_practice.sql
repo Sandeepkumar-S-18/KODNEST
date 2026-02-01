@@ -204,6 +204,8 @@ SELECT * FROM student ORDER BY marks DESC LIMIT 1;
 */
 SELECT city, COUNT(name) FROM student GROUP BY city;
 SELECT city, AVG(marks) FROM student GROUP BY city;
+SELECT city, AVG(marks) FROM student GROUP BY city ORDER BY city;
+SELECT city, AVG(marks) FROM student GROUP BY city ORDER BY AVG(marks);
 -- ======================================================================================================================
 -- FUNCTIONS
 /*
